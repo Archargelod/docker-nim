@@ -18,10 +18,8 @@ WORKDIR /src
 RUN \
   curl -fsSLO https://nim-lang.org/download/nim-${version_nim}.tar.xz && \
   tar -xJf nim-${version_nim}.tar.xz && \
-  cd nim-${version_nim} && \
-  arch && \
-  uname -m && \  
-  sh build.sh && \
+  cd nim-${version_nim} && \  
+  sh build.sh --cpu "$TARGETPLATFORM" && \
   bin/nim c koch && \
   chmod +x koch && \
   ./koch boot -d:release && \
