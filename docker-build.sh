@@ -215,7 +215,7 @@ function dockerBuildx {
     --build-arg BUILD_REVISION=$build_revision \
     --build-arg BUILD_DATE=$current_time \
     --force-rm \
-    --platform linux/arm/v7,linux/arm64/v8,linux/386,linux/amd64 \
+    --platform linux/arm/v7,linux/arm64/v8,linux/i386,linux/amd64 \
     --push \
     --tag "${tag}" \
     --file Dockerfile \
