@@ -20,8 +20,7 @@ RUN \
   curl -fsSLO https://nim-lang.org/download/nim-${version_nim}.tar.xz && \
   tar -xJf nim-${version_nim}.tar.xz && \
   cd nim-${version_nim} && \
-  echo ${TARGETARCH} && \
-  sh build.sh --cpu ${TARGETARCH} && \
+  sh build.sh --cpu i386 && \
   bin/nim c koch && \
   chmod +x koch && \
   ./koch boot -d:release && \
