@@ -1,6 +1,7 @@
 FROM alpine:3.18.4 AS nim
 
 ARG version_nim=2.0.0
+ARG DOCKER_BUILDKIT=1
 
 RUN \
   apk --no-cache add \
