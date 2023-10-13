@@ -19,6 +19,8 @@ RUN \
   curl -fsSLO https://nim-lang.org/download/nim-${version_nim}.tar.xz && \
   tar -xJf nim-${version_nim}.tar.xz && \
   cd nim-${version_nim} && \
+  arch && \
+  uname -m && \  
   sh build.sh && \
   bin/nim c koch && \
   chmod +x koch && \
